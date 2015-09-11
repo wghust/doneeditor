@@ -1,0 +1,92 @@
+<%include header %>
+<style type="text/css">
+	.eblock_con {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: 760px;
+		height: 560px;
+	}
+	.write_con {
+		position: absolute;
+		z-index: 2;
+		width: 760px;
+		height: 560px;
+		padding: 20px;
+		opacity: 0;
+		top: 0;
+		left: 0;
+	}
+</style>
+<div class="container">
+	<div class="eblock">
+		<div class="eblock_top">
+			<!-- <span class=""></span> -->
+			<div class="eblock_title" contenteditable="true">无标题</div>
+		</div>
+		<div class="eblock_mid">
+			<div class="eblock_con" id="eblock_con" contenteditable="true">添加内容</div>
+			<textarea class="write_con" id="write_con"></textarea>
+		</div>
+		<div class="eblock_footer"></div>
+		<div class="eblock_panel">
+			<ul>
+				<li class="modalbtn" data-type="picture">图片</li>
+				<li class="modalbtn" data-type="link">链接</li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+	<div class="modal picmodal">
+		<div class="modal_con">
+			<div class="modal_title">
+				添加图片
+			</div>
+			<div class="modal_in">
+				<a href="#" class="add_pic_btn">添加</a>
+				<input type="file" class="addimage" id="addimage" name="addimage">
+			</div>
+			<div class="modal_op">
+				<ul>
+					<li class="sure">确定</li>
+					<li class="cancel">取消</li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal urlmodal">
+		<div class="modal_con">
+			<div class="modal_title">
+				添加链接
+			</div>
+			<div class="modal_in">
+				<input type="text" class="modal_url" placeholder="http://"><br>
+				<textarea class="modal_urldec" placeholder="title"></textarea>
+			</div>
+			<div class="modal_op">
+				<ul>
+					<li class="sure">确定</li>
+					<li class="cancel">取消</li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="/highlight/lib/codemirror.js"></script>
+<script type="text/javascript" src="/highlight/mode/markdown/markdown.js"></script>
+<script type="text/javascript" src="/highlight/addon/selection/active-line.js"></script>
+<script type="text/javascript" src="/highlight/addon/edit/matchbrackets.js"></script>
+<script type="text/javascript" src="/highlight/addon/mode/loadmode.js"></script>
+<script type="text/javascript" src="/javascripts/lib/marked.js"></script>
+<script type="text/javascript" src="/javascripts/lib/jquery.easing.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/highlight/lib/codemirror.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/highlighttheme.min.css">
+
+<script type="text/javascript" src="/javascripts/lib/ajaxfileupload.js"></script>
+<script type="text/javascript" src="/javascripts/business/editor/editor_2.js"></script>
+<%include footer %>
